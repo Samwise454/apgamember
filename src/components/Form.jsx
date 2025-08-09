@@ -245,7 +245,7 @@ const Form = () => {
                     return response.json(); 
                 })
                 .then(data => {
-                    // console.log(data)
+                    console.log(data)
                     // Process the fetched image first and then send the form
                     hide_loader();
 
@@ -277,7 +277,7 @@ const Form = () => {
                 });
             }
             else {
-                //send imgFormData to the backend when image is selected
+                //send imgFormData to the backend when image is NOT selected
                 fetch(url, {
                     method: "POST",
                     body: imgFormData

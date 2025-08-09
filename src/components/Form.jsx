@@ -245,7 +245,7 @@ const Form = () => {
                     return response.json(); 
                 })
                 .then(data => {
-                    // console.log(data)
+                    console.log(data)
                     // Process the fetched image first and then send the form
                     hide_loader();
 
@@ -293,7 +293,7 @@ const Form = () => {
                     return response.json(); 
                 })
                 .then(data => {
-                    // console.log(data)
+                    console.log(data)
                     // Process the fetched image first and then send the form
                     hide_loader();
 

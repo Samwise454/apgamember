@@ -16,7 +16,7 @@ const Form = () => {
     let [pollWards, setPollWards] = useState([]);
     let [allBanks, setAllBanks] = useState([]);
     const [formInput, setFormInput] = useState({
-        title: "",
+        // title: "",
         gender: "",
         surname: "",
         firstname: "",
@@ -25,7 +25,7 @@ const Form = () => {
         tel: "",
         lga: "",
         ward: "",
-        vinNum: "",
+        // vinNum: "",
         job: "",
         address: "",
         acctName: "",
@@ -79,9 +79,9 @@ const Form = () => {
         let formValue = e.target.value;
 
         switch(formId) {
-            case "ntitle": 
-                setFormInput({...formInput, title : formValue});
-                break;
+            // case "ntitle": 
+            //     setFormInput({...formInput, title : formValue});
+            //     break;
             case "fname": 
                 setFormInput({...formInput, firstname : formValue});
                 break;
@@ -106,9 +106,9 @@ const Form = () => {
             case "ward":
                 setFormInput({...formInput, ward : formValue});
                 break;
-            case "vin":
-                setFormInput({...formInput, vinNum : formValue});
-                break;
+            // case "vin":
+            //     setFormInput({...formInput, vinNum : formValue});
+            //     break;
             case "occupation":
                 setFormInput({...formInput, job : formValue});
                 break;
@@ -139,7 +139,7 @@ const Form = () => {
         imgFormData.append('image', fileData);
         imgFormData.append('who', who);
         imgFormData.append('tData', 
-            formInput.title+"~"+
+            // formInput.title+"~"+
             formInput.firstname+"~"+
             formInput.middlename+"~"+
             formInput.surname+"~"+
@@ -148,7 +148,7 @@ const Form = () => {
             formInput.address+"~"+
             formInput.dob+"~"+
             formInput.ward+"~"+
-            formInput.vinNum+"~"+
+            // formInput.vinNum+"~"+
             formInput.job+"~"+
             formInput.acctName+"~"+
             formInput.bankName+"~"+
@@ -184,7 +184,7 @@ const Form = () => {
             imgFormData.append('image', "");
             imgFormData.append('who', who);
             imgFormData.append('tData', 
-                formInput.title+"~"+
+                // formInput.title+"~"+
                 formInput.firstname+"~"+
                 formInput.middlename+"~"+
                 formInput.surname+"~"+
@@ -193,7 +193,7 @@ const Form = () => {
                 formInput.address+"~"+
                 formInput.dob+"~"+
                 formInput.ward+"~"+
-                formInput.vinNum+"~"+
+                // formInput.vinNum+"~"+
                 formInput.job+"~"+
                 formInput.acctName+"~"+
                 formInput.bankName+"~"+
@@ -202,7 +202,7 @@ const Form = () => {
                 );
         }
 
-        if (formInput.title.length == 0 ||
+        if (//formInput.title.length == 0 ||
             formInput.firstname.length == 0 ||
             formInput.middlename.length == 0 ||
             formInput.surname.length == 0 ||
@@ -212,12 +212,11 @@ const Form = () => {
             formInput.dob.length == 0 ||
             formInput.lga.length == 0 ||
             formInput.ward.length == 0 ||
-            formInput.vinNum.length == 0 ||
+            // formInput.vinNum.length == 0 ||
             formInput.job.length == 0 ||
             formInput.acctName.length == 0 ||
             formInput.bankName.length == 0 ||
             formInput.acctNum.length == 0
-            // formInput.tCode.length == 0
         ) {
             let msg = "Check for empty field!!";
             hide_loader();
@@ -342,12 +341,12 @@ const Form = () => {
         <form onSubmit={handleForm} action="#" id='tForm' className='tForm bg-white shadow-sm border-t-2 flex justify-center items-center h-auto py-15 flex-col m-8 mb-20'>
 
             <div className='text-left flex-col'>
-                <p className='formLabel'>Title: </p>
+                {/* <p className='formLabel'>Title: </p>
                 <input type="text" name='ntitle' id='ntitle' 
                     placeholder='Eg Chief, Sir, Mr, Mrs, etc'
                     className='mainFormInput bg-white mb-7 shadow-md' 
                     onChange={handleFormInput}   
-                />
+                /> */}
 
                 <p className='formLabel'>Surname: </p>
                 <input type="text" name='sname' id='sname' 
@@ -434,12 +433,12 @@ const Form = () => {
                     })}
                 </select>
 
-                <p className='formLabel'>VIN Number: </p>
+                {/* <p className='formLabel'>VIN Number: </p>
                 <input type="text" name='vin' id='vin' 
                     placeholder='Eg: 4Y1SL65848Z411439'
                     className='mainFormInput bg-white mb-7 shadow-md'  
                     onChange={handleFormInput}  
-                />
+                /> */}
 
                 <p className='formLabel'>Occupation: </p>
                 <input type="text" name='occupation' id='occupation' 
